@@ -8,6 +8,23 @@ $gray-100: #efefef;
 
 .container-fluid {
   padding: 0 !important;
-};
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.banner {
+  position: relative;
+}
+
+.over-img {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: white;
+}
 
 @import "node_modules/bootstrap/scss/bootstrap";
