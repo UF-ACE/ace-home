@@ -8,11 +8,17 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.3.1",
+    "imagemin-optipng": "^7.0.0",
+    "jquery": "^3.4.1",
     "next": "^9.0.5",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.3",
     "node-sass": "^4.12.0",
+    "popper.js": "^1.15.0",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "webpack": "^4.39.3"
   },
   "scripts": {
     "dev": "next",

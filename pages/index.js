@@ -1,7 +1,22 @@
 import '../styles.scss'
+import {
+  Container,
+  Row,
+  Col
+} from 'react-bootstrap'
+
+import Nav from '../components/nav'
 
 function Home() {
-  return <div className='example'>ACE</div>
+  return (
+    <Container fluid>
+      <Nav />
+      <Row>
+        <Col>
+        </Col>
+      </Row>
+    </Container>
+  )
 }
 
 export default Home

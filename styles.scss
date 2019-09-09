@@ -1,4 +1,13 @@
-$font-size: 50px;
-.example {
-  font-size: $font-size;
+$blue: #A4AFFD;
+$orange: #F87060;
+$gray-100: #efefef;
+
+.bg-blue {
+  background-color: $blue;
 }
+
+.container-fluid {
+  padding: 0 !important;
+};
+
+@import "node_modules/bootstrap/scss/bootstrap";
