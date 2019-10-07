@@ -16,10 +16,10 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#home">About</Nav.Link>
-              <Nav.Link href="#home">Schedule</Nav.Link>
-              <Nav.Link href="#home">Resources</Nav.Link>
-              <Nav.Link href="#home">Join</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#schedule">Schedule</Nav.Link>
+              <Nav.Link href="#resources">Resources</Nav.Link>
+              <Nav.Link href="">Join</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

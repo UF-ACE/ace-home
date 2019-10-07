@@ -2,6 +2,18 @@ $blue: #A4AFFD;
 $orange: #F87060;
 $gray-100: #efefef;
 
+@font-face {
+  font-family: 'Kollektif';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('assets/fonts/Kollektif.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Kollektif' !important;
+}
+
 .bg-blue {
   background-color: $blue;
 }
