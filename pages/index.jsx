@@ -9,12 +9,25 @@ import {
 
 import Nav from '../components/nav'
 import SocialButton from '../components/social-button'
+import Officer from '../components/officer'
+
+import BOARD_DATA from '../components/config/board'
 
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function Home() {
+  const boardCards = BOARD_DATA.map((officer) => (
+    <Officer 
+      title={officer.title}
+      name={officer.name}
+      email={officer.email}
+      slack={officer.slack}
+      src={require(`../public/board/${officer.src}`)}
+    />
+  ))
+
   return (
     <Container fluid>
       <Nav />
@@ -58,6 +71,17 @@ function Home() {
           </Container>
         </Jumbotron>
       </ScrollableAnchor>
+      <Container>
+        <Row>
+          <Col xs={{span: 6, offset: 3}}>
+            <h2 className="text-center">Our 2019 Officers</h2>
+            <hr />
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          {boardCards}
+        </Row>
+      </Container>
     </Container>
   )
 }

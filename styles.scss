@@ -50,8 +50,13 @@ body {
   text-decoration: none;
 }
 
+.text-orange {
+  color: $orange;
+}
+
 .banner {
   position: relative;
+  margin-top: 2.5em;
 }
 
 .over-img {

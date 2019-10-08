@@ -3,7 +3,7 @@ import { Nav, Navbar, Container } from 'react-bootstrap'
 function Header() {
   return (
     <>
-      <Navbar variant="dark" bg="blue" expand="md">
+      <Navbar variant="dark" bg="blue" expand="md" fixed="top">
         <Container>
           <Navbar.Brand href="#">
             <img
