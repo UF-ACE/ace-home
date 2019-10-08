@@ -8,9 +8,9 @@ import {
 } from 'react-bootstrap'
 
 import Nav from '../components/nav'
+import SocialButton from '../components/social-button'
 
 import ScrollableAnchor from 'react-scrollable-anchor'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
@@ -20,14 +20,14 @@ function Home() {
       <Nav />
       <ScrollableAnchor id={'home'}>
         <Container className="banner text-center" fluid>
-          <Image src={require('../assets/banner.jpg')} fluid />
+          <Image src={require('../public/banner.jpg')} fluid />
           <div className="over-img">
-            <h1 className="display-3">ACE @ UF</h1>
+            <h1 className="display-1">ACE @ UF</h1>
           </div>
         </Container>
       </ScrollableAnchor>
       <ScrollableAnchor id={'about'}>
-        <Jumbotron>
+        <Jumbotron style={{ marginTop: 0 }}>
           <Container>
             <h2>About</h2>
             <hr />
@@ -37,11 +37,27 @@ function Home() {
       </ScrollableAnchor>
       <Container>
         <Row>
-          <Col>
-            
+          <Col xs={{span: 6, offset: 3}}>
+            <h2 className="text-center">Thank you to our Sponsors!</h2>
+            <hr />
+            <Image src={require('../public/sponsors/jpmc.jpg')} />
           </Col>
         </Row>
       </Container>
+      <ScrollableAnchor id={'connect'}>
+        <Jumbotron>
+          <Container>
+            <h2>Connect with Us</h2>
+            <hr />
+            <Row>
+              <SocialButton link="https://uf-ace.slack.com/" icon={faSlack} title="Slack" />
+              <SocialButton link="https://www.facebook.com/groups/gatorace/?ref=bookmarks" icon={faFacebook} title="Facebook" />
+              <SocialButton link="https://twitter.com/ace_uf?lang=en" icon={faTwitter} title="Twitter" />
+              <SocialButton link="https://www.instagram.com/ace_uf" icon={faInstagram} title="Instagram" />
+            </Row>
+          </Container>
+        </Jumbotron>
+      </ScrollableAnchor>
     </Container>
   )
 }

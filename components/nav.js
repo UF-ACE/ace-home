@@ -7,7 +7,7 @@ function Header() {
         <Container>
           <Navbar.Brand href="#">
             <img
-              src={require('../assets/logo.png')}
+              src={require('../public/logo.png')}
               height="30"
               className="d-inline-block align-top"
             />
