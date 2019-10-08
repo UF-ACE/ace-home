@@ -9,7 +9,7 @@ const officer = (props) => (
 	<Image src={props.src} rounded fluid />
 	<p className="text-center mt-3 mb-1">{props.name}</p>
 	<p className="text-center">
-		<a className="social-button mr-2" href={`mailto:${props.email}`}><FontAwesomeIcon icon={faEnvelope} fixedWidth /> Email</a>
+		{props.email ? <a className="social-button mr-2" href={`mailto:${props.email}`}><FontAwesomeIcon icon={faEnvelope} fixedWidth /> Email</a> : null}
 		<FontAwesomeIcon className="ml-1 mr-0" icon={faSlack} /> @{props.slack} 
 	</p>
 </Col>

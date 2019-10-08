@@ -18,12 +18,13 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function Home() {
-  const boardCards = BOARD_DATA.map((officer) => (
+  const boardCards = BOARD_DATA.map((officer, key) => (
     <Officer 
       title={officer.title}
       name={officer.name}
       email={officer.email}
       slack={officer.slack}
+      key={key}
       src={require(`../public/board/${officer.src}`)}
     />
   ))

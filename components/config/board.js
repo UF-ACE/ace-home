@@ -50,7 +50,6 @@ const BOARD_DATA = [
 	},
 	{
 		name: "Denise Tran",
-		email: "outreach.uf.ace@gmail.com",
 		title: "Marketing",
 		src: "denise.jpg",
 		slack: "denephew"
