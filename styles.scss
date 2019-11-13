@@ -7,7 +7,17 @@ $gray-100: #efefef;
   font-style: normal;
   font-weight: 400;
   src:
-    url('assets/fonts/Kollektif.ttf') format('truetype');
+    url('public/fonts/Kollektif.ttf') format('truetype');
+}
+
+.display-1 {
+  -webkit-text-stroke-width: 0.035em;
+  -webkit-text-stroke-color: black;
+}
+
+.jpmc {
+  width: 30%;
+  height: auto;
 }
 
 body {
@@ -22,13 +32,31 @@ body {
   padding: 0 !important;
 }
 
+.jumbotron {
+  margin-top: 4rem;
+}
+
 .img-fluid {
   width: 100%;
   height: auto;
 }
 
+.social-button {
+  color: black;
+}
+
+.social-button:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
+.text-orange {
+  color: $orange;
+}
+
 .banner {
   position: relative;
+  margin-top: 2.5em;
 }
 
 .over-img {

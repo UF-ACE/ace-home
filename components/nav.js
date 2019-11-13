@@ -3,11 +3,11 @@ import { Nav, Navbar, Container } from 'react-bootstrap'
 function Header() {
   return (
     <>
-      <Navbar variant="dark" bg="blue" expand="md">
+      <Navbar variant="dark" bg="blue" expand="md" fixed="top">
         <Container>
           <Navbar.Brand href="#">
             <img
-              src={require('../assets/logo.png')}
+              src={require('../public/logo.png')}
               height="30"
               className="d-inline-block align-top"
             />
