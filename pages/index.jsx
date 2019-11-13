@@ -36,7 +36,7 @@ function Home() {
         <Container className="banner text-center" fluid>
           <Image src={require('../public/banner.jpg')} fluid />
           <div className="over-img">
-            <h1 className="display-1">ACE @ UF</h1>
+            <h1 className="display-1 d-none d-sm-block">ACE @ UF</h1>
           </div>
         </Container>
       </ScrollableAnchor>
@@ -54,7 +54,7 @@ function Home() {
           <Col xs={{span: 6, offset: 3}}>
             <h2 className="text-center">Thank you to our Sponsors!</h2>
             <hr />
-            <Image src={require('../public/sponsors/jpmc.jpg')} />
+            <Image className="img-fluid" src={require('../public/sponsors/jpmc.jpg')} />
           </Col>
         </Row>
       </Container>

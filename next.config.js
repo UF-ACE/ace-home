@@ -12,8 +12,10 @@ module.exports = withPlugins(
   {
     compress: true,
     target: 'server',
-    generateBuildId: async () => {
-      return 'deploy'
+    exportPathMap: function() {
+      return {
+        '/': { page: '/' }
+      };
     }
   }
 )

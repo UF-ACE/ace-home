@@ -10,7 +10,9 @@ RUN npm install
 
 RUN npm run build
 
+RUN npm run export
+
 FROM nginx:1.17.3-alpine
 
-COPY --from=builder /app/.next/server/static/deploy/pages/* /usr/share/nginx/html/
+COPY --from=builder /app/out/ /usr/share/nginx/html/
 
