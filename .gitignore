@@ -64,6 +64,8 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+.next
+
 # dotenv environment variables file
 .env
 .env.test
