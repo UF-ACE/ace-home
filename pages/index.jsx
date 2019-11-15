@@ -33,7 +33,13 @@ function Home() {
 
   const today = new Date()
 
-  const alumniCards = ALUMNI_DATA.sort((a,b) => { return a.name > b.name }).map((alumni, key) => 
+  const SORTED_ALUMNI = ALUMNI_DATA.sort((a, b) => {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
+    return 0;
+  })
+
+  const alumniCards = SORTED_ALUMNI.map((alumni, key) => 
     {
       let dateGrad = new Date(alumni.dateGraduated)
       if (today <= dateGrad) {
