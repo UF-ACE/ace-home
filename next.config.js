@@ -6,7 +6,10 @@ const withFonts = require('next-fonts');
 module.exports = withPlugins(
   [
     [sass, {}],
-    [optimizedImages, {}],
+    [optimizedImages, {
+      handleImages: ['jpeg', 'png'],
+      optimizeImages: true
+    }],
     [withFonts, {}],
   ],
   {

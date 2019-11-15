@@ -27,7 +27,7 @@ function Home() {
       email={officer.email}
       slack={officer.slack}
       key={key}
-      src={require(`../public/board/${officer.src}`)}
+      src={require(`../public/board/${officer.src}?resize&sizes[]=300&sizes[]=600`)}
     />
   ))
 
@@ -55,7 +55,7 @@ function Home() {
           linkedin={alumni.linkedin}
           roles={alumni.roles}
           key={key}
-          src={require(`../public/alumni/${alumni.src}`)}
+          src={require(`../public/alumni/${alumni.src}?resize&sizes[]=300&sizes[]=600`)}
         />
       )
     }
@@ -66,7 +66,7 @@ function Home() {
       <Nav />
       <ScrollableAnchor id={'home'}>
         <Container className="banner text-center" fluid>
-          <Image src={require('../public/banner.jpg')} fluid />
+          <Image src={require('../public/banner.jpg')} alt="Banner ACE @ UF" fluid />
           <div className="over-img">
             <h1 className="display-1 d-none d-sm-block">ACE @ UF</h1>
           </div>
@@ -86,7 +86,7 @@ function Home() {
           <Col xs={{span: 6, offset: 3}}>
             <h2 className="text-center">Thank you to our Sponsors!</h2>
             <hr />
-            <Image className="img-fluid" src={require('../public/sponsors/jpmc.jpg')} />
+            <Image className="img-fluid" alt="Sponsor: JP Morgan and Chase Co" src={require('../public/sponsors/jpmc.jpg?resize')} />
           </Col>
         </Row>
       </Container>

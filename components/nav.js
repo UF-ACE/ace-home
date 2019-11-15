@@ -5,10 +5,11 @@ function Header() {
     <>
       <Navbar variant="dark" bg="blue" expand="md" fixed="top">
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand>
             <img
-              src={require('../public/logo.png')}
+              src={require('../public/logo.png?resize&sizes[]=70&sizes[]=140')}
               height="30"
+              alt="Logo"
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
