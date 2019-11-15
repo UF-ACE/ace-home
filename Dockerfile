@@ -21,7 +21,7 @@ RUN yarn export
 
 FROM nginx:1.17.5-alpine
 
-ADD nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=builder /app/out/ /usr/share/nginx/html/
 
