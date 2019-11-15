@@ -73,7 +73,7 @@ function Home() {
         </Container>
       </ScrollableAnchor>
       <ScrollableAnchor id={'about'}>
-        <Jumbotron style={{ marginTop: 0 }}>
+        <Jumbotron className="mt-0">
           <Container>
             <h2>About</h2>
             <hr />
