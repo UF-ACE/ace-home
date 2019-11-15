@@ -10,8 +10,10 @@ import {
 import Nav from '../components/nav'
 import SocialButton from '../components/social-button'
 import Officer from '../components/officer'
+import Alumni from '../components/alumni'
 
 import BOARD_DATA from '../components/config/board'
+import ALUMNI_DATA from '../components/config/alumni'
 
 import ScrollableAnchor from 'react-scrollable-anchor'
 
@@ -28,6 +30,30 @@ function Home() {
       src={require(`../public/board/${officer.src}`)}
     />
   ))
+
+  const today = new Date()
+
+  const alumniCards = ALUMNI_DATA.sort((a,b) => { return a.name > b.name }).map((alumni, key) => 
+    {
+      let dateGrad = new Date(alumni.dateGraduated)
+      if (today <= dateGrad) {
+        return null
+      }
+      return (
+        <Alumni 
+          name={alumni.name}
+          slack={alumni.slack}
+          company={alumni.company}
+          major={alumni.major}
+          dateGraduated={dateGrad}
+          linkedin={alumni.linkedin}
+          roles={alumni.roles}
+          key={key}
+          src={require(`../public/alumni/${alumni.src}`)}
+        />
+      )
+    }
+  )
 
   return (
     <Container fluid>
@@ -82,6 +108,15 @@ function Home() {
         <Row className="justify-content-center">
           {boardCards}
         </Row>
+      </Container>
+      <Container>
+        <Row>
+          <Col xs={{span: 6, offset: 3}}>
+            <h2 className="text-center">Our Alumni</h2>
+            <hr />
+          </Col>
+        </Row>
+        {alumniCards}
       </Container>
     </Container>
   )
