@@ -1,18 +1,27 @@
-FROM node:carbon as builder
+FROM node:erbium as builder
 
 WORKDIR /app
 
-ADD . .
 
 ENV NODE_ENV production
 
-RUN npm install
+RUN npm install -g yarn
 
-RUN npm run build
+ADD package.json . 
 
-RUN npm run export
+ADD yarn.lock . 
+
+RUN yarn install
+
+ADD . .
+
+RUN yarn build
+
+RUN yarn export
 
 FROM nginx:1.17.5-alpine
+
+ADD nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=builder /app/out/ /usr/share/nginx/html/
 

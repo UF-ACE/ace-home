@@ -8,6 +8,10 @@ metadata:
 spec:
   replicas: 2
   revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: home
@@ -23,6 +27,16 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/usr/sbin/nginx","-s","quit"]
 ---
 apiVersion: v1
 kind: Service
