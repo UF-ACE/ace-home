@@ -12,7 +12,7 @@ RUN npm run build
 
 RUN npm run export
 
-FROM nginx:1.17.3-alpine
+FROM nginx:1.17.5-alpine
 
 COPY --from=builder /app/out/ /usr/share/nginx/html/
 
