@@ -2,6 +2,7 @@
 !components/
 !pages/
 !public/
+!.postcss.config.js
 !next.config.js
 !nginx.conf
 !package.json
