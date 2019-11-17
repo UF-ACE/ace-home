@@ -1,18 +1,20 @@
 const sass = require('@zeit/next-sass')
 const css = require('@zeit/next-css')
+const purgeCss = require('next-purgecss')
 const withPlugins = require('next-compose-plugins')
 const optimizedImages = require('next-optimized-images')
-const withFonts = require('next-fonts');
+const fonts = require('next-fonts');
 
 module.exports = withPlugins(
   [
-    [sass, {}],
-    [css, {}],
+    [sass],
+    [purgeCss],
+    [css],
     [optimizedImages, {
       handleImages: ['jpeg', 'png'],
       optimizeImages: true
     }],
-    [withFonts, {}],
+    [fonts],
   ],
   {
     compress: true,
