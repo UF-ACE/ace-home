@@ -22,6 +22,8 @@
     "next-optimized-images": "^2.5.3",
     "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
+    "postcss-clean": "^1.1.0",
+    "postcss-remove-unused-css": "^1.0.4",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
