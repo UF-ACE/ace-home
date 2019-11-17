@@ -4,4 +4,6 @@
 !public/
 !next.config.js
 !nginx.conf
+!package.json
 !styles.scss
+!yarn.lock
