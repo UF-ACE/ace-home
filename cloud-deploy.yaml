@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: home
-          image: quay.io/uface/home:0.4.3
+          image: quay.io/uface/home:0.4.4
           ports:
             - containerPort: 80
               protocol: TCP
