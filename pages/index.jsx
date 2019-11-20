@@ -19,6 +19,8 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 
 import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
+const moment = require('moment')
+
 function Home() {
   const boardCards = BOARD_DATA.map((officer, key) => (
     <Officer 
@@ -31,7 +33,7 @@ function Home() {
     />
   ))
 
-  const today = new Date()
+  const today = moment()
 
   const SORTED_ALUMNI = ALUMNI_DATA.sort((a, b) => {
     if (a.name < b.name) { return -1; }
@@ -41,8 +43,8 @@ function Home() {
 
   const alumniCards = SORTED_ALUMNI.map((alumni, key) => 
     {
-      let dateGrad = new Date(alumni.dateGraduated)
-      if (today <= dateGrad) {
+      let dateGrad = moment(alumni.dateGraduated)
+      if (today.isBefore(dateGrad)) {
         return null
       }
       return (

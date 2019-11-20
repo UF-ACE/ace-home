@@ -15,7 +15,7 @@ const alumni = (props) => (
 		</p>
 		<hr />
 		<p>
-			Graduated {props.dateGraduated.getFullYear()}, {props.major}
+			Graduated {props.dateGraduated.format("YYYY")}, {props.major}
 		</p>
 		<p>
 			Employed at {props.company}
@@ -31,7 +31,7 @@ const alumni = (props) => (
 			{props.roles.join(' | ')}
 		</p>
 		<p className="text-center">
-			Graduated {props.dateGraduated.getFullYear()}, {props.major}
+			Graduated {props.dateGraduated.format("YYYY")}, {props.major}
 		</p>
 		<p className="text-center">
 			Employed at {props.company}
