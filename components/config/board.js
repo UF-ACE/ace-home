@@ -1,107 +1,107 @@
 const BOARD_DATA = [
 	{
-		name: "Daniela Travieso",
+		name: "Kayton Fletcher",
 		email: "president.uf.ace@gmail.com",
 		title: "President",
-		src: "daniela.jpg",
-		slack: "dani"
+		src: "kayton.jpg",
+		slack: "kayton"
 	},
 	{
-		name: "Rohan Kharwadkar",
+		name: "John Dillon",
 		email: "vp.uf.ace@gmail.com",
 		title: "Vice President",
-		src: "rohan.jpg",
-		slack: "rohan"
+		src: "john.jpg",
+		slack: "jd3"
 	},
 	{
-		name: "Jailyn Van Horn",
+		name: "Christopher Miller",
 		email: "secretary.uf.ace@gmail.com",
 		title: "Secretary",
-		src: "jailyn.jpg",
-		slack: "Jailyn"
-	},
-	{
-		name: "Agustin Martinez",
-		email: "treasurer.uf.ace@gmail.com",
-		title: "Treasurer",
-		src: "agustin.jpg",
-		slack: "agustin"
-	},
-	{
-		name: "Alice Hartley",
-		email: "project.manager.uf.ace@gmail.com",
-		title: "Project Manager",
-		src: "alice.jpg",
-		slack: "alice"
-	},
-	{
-		name: "Kayton Fletcher",
-		email: "academic.uf.ace@gmail.com",
-		title: "Academic",
-		src: "kayton.jpg",
-		slack: "Kayton Fletcher"
+		src: "chris.jpg",
+		slack: "Chris"
 	},
 	{
 		name: "Tyler Knightes",
-		email: "bec.uf.ace@gmail.com",
-		title: "BEC Representative",
+		email: "treasurer.uf.ace@gmail.com",
+		title: "Treasurer",
 		src: "tyler.jpg",
-		slack: "tylerknightes"
-	},
-	{
-		name: "Denise Tran",
-		title: "Marketing",
-		src: "denise.jpg",
-		slack: "denephew"
-	},
-	{
-		name: "Stefan Pessolano",
-		email: "outreach.uf.ace@gmail.com",
-		title: "Outreach",
-		src: "stefan.jpg",
-		slack: "stefan"
-	},
-	{
-		name: "Matt Baumaister",
-		email: "social.uf.ace@gmail.com",
-		title: "Social",
-		src: "matt.jpg",
-		slack: "mattybraps"
-	},
-	{
-		name: "Nicolas Signori",
-		email: "professional.uf.ace@gmail.com",
-		title: "Professional Dev.",
-		src: "nick.jpg",
-		slack: "nick"
-	},
-	{
-		name: "JJ Thurber",
-		email: "fundraising.uf.ace@gmail.com",
-		title: "Fundraising",
-		src: "jj.jpg",
-		slack: "thurb"
-	},
-	{
-		name: "Sara Gaya",
-		email: "mentorship.uf.ace@gmail.com",
-		title: "Mentorship",
-		src: "sara.jpg",
-		slack: "Sara"
+		slack: "tyler"
 	},
 	{
 		name: "Andrew Sanchez",
-		email: "development.uf.ace@gmail.com",
-		title: "Technical Projects",
+		email: "project.manager.uf.ace@gmail.com",
+		title: "Project Manager",
 		src: "andrew.jpg",
 		slack: "andrew"
 	},
 	{
-		name: "Chris Miller",
+		name: "Dhruv Patel",
+		email: "academic.uf.ace@gmail.com",
+		title: "Academic",
+		src: "noPhoto.jpg",
+		slack: "Dhruv Patel"
+	},
+	{
+		name: "Mackenzie Fileman",
+		email: "bec.uf.ace@gmail.com",
+		title: "Art",
+		src: "noPhoto.jpg",
+		slack: "Mackenzie Fileman"
+	},
+	{
+		name: "Robert McAdam",
+		title: "Marketing",
+		src: "noPhoto.jpg",
+		slack: "Bob"
+	},
+	{
+		name: "Caleb O'Malley",
+		email: "outreach.uf.ace@gmail.com",
+		title: "Outreach",
+		src: "noPhoto.jpg",
+		slack: "Caleb"
+	},
+	{
+		name: "Nate Stull",
+		email: "social.uf.ace@gmail.com",
+		title: "Social",
+		src: "noPhoto.jpg",
+		slack: "Nate Stull"
+	},
+	{
+		name: "Gregory Garrett",
+		email: "professional.uf.ace@gmail.com",
+		title: "Professional Dev.",
+		src: "noPhoto.jpg",
+		slack: "Greg"
+	},
+	{
+		name: "Eddie Ferro",
+		email: "fundraising.uf.ace@gmail.com",
+		title: "Fundraising",
+		src: "noPhoto.jpg",
+		slack: "Eddit Ferro"
+	},
+	{
+		name: "Adam Conybear",
+		email: "mentorship.uf.ace@gmail.com",
+		title: "Mentorship",
+		src: "noPhoto.jpg",
+		slack: "Adam"
+	},
+	{
+		name: "Connor Catlett",
 		email: "development.uf.ace@gmail.com",
 		title: "Technical Projects",
-		src: "chris.jpg",
-		slack: "Chris"
+		src: "noPhoto.jpg",
+		slack: "ConnorJC"
+	},
+	{
+		name: "Christopher Wilson",
+		email: "development.uf.ace@gmail.com",
+		title: "Technical Projects",
+		src: "noPhoto.jpg",
+		slack: "Christopher Wilson"
 	},
 ]
 
