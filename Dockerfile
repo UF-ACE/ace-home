@@ -11,6 +11,11 @@ RUN yarn install
 ADD . .
 RUN yarn build
 RUN yarn export
+RUN mv .postcss.config.js postcss.config.js
+RUN rm -rf .next/
+RUN yarn build
+RUN rm -rf out/
+RUN yarn export
 
 FROM nginx:1.17-alpine
 

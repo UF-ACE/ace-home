@@ -21,16 +21,17 @@
     "next-compose-plugins": "^2.2.0",
     "next-fonts": "^0.18.0",
     "next-optimized-images": "^2.5.3",
-    "next-purgecss": "^3.1.1",
     "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
     "postcss-clean": "^1.1.0",
+    "postcss-uncss": "^0.17.0",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
     "react-scrollable-anchor": "^0.6.1",
     "responsive-loader": "^1.2.0",
     "sharp": "^0.23.2",
+    "uncss": "^0.17.2",
     "webpack": "^4.39.3"
   },
   "scripts": {
