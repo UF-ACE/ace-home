@@ -15,7 +15,7 @@ const ALUMNI_DATA = [
   },
   {
     name: "Agustin Martinez",
-    dateGraduated: "2020-5-18",
+    dateGraduated: "2020-05-18",
 		roles: [
       "Treasurer",
       "BEC Representative"
@@ -28,7 +28,7 @@ const ALUMNI_DATA = [
   },
   {
     name: "Chad Lim",
-    dateGraduated: "2019-5-18",
+    dateGraduated: "2019-05-18",
 		roles: [
       "Treasurer",
       "BEC Representative"
@@ -41,7 +41,7 @@ const ALUMNI_DATA = [
   },
   {
     name: "Luke Pfeiffer",
-    dateGraduated: "2020-5-18",
+    dateGraduated: "2020-05-18",
 		roles: [
       "Web Development Chair"
     ],
@@ -53,7 +53,7 @@ const ALUMNI_DATA = [
   },
   {
     name: "Jason Hsu",
-    dateGraduated: "2017-5-18",
+    dateGraduated: "2017-05-18",
 		roles: [
       "Secretary",
       "BEC Representative"

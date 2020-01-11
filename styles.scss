@@ -51,6 +51,15 @@ body {
   text-decoration: none;
 }
 
+.mail-button {
+  color: black;
+}
+
+.mail-button:hover {
+  color: $orange;
+  text-decoration: none;
+}
+
 .text-orange {
   color: $orange;
 }
