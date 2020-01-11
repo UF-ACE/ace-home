@@ -4,7 +4,6 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN npm install -g yarn
 ADD package.json . 
 ADD yarn.lock . 
 RUN yarn install
