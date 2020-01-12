@@ -65,17 +65,19 @@ function Home() {
     }
   )
 
-    const eventCards = EVENT_DATA.map((event, key) =>{
-      return (
-        <Event
-          key={key}
-          name={event.summary}
-          description={event.description}
-          datetime={event.datetime}
-          location={event.location}
-        />
-      )
-    });
+    const eventCards = EVENT_DATA.map((event, key) => 
+      {
+        return (
+          <Event
+            key={key}
+            name={event.summary}
+            description={event.description}
+            datetime={event.datetime}
+            location={event.location}
+          />
+        )
+      }
+    )
 
 
 
