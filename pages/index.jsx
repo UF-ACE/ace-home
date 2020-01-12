@@ -11,9 +11,11 @@ import Nav from '../components/nav'
 import SocialButton from '../components/social-button'
 import Officer from '../components/officer'
 import Alumni from '../components/alumni'
+import Event from '../components/event'
 
 import BOARD_DATA from '../components/config/board'
 import ALUMNI_DATA from '../components/config/alumni'
+import EVENT_DATA from '../components/config/event'
 
 import ScrollableAnchor from 'react-scrollable-anchor'
 
@@ -63,6 +65,22 @@ function Home() {
     }
   )
 
+    const eventCards = EVENT_DATA.map((event, key) => 
+      {
+        return (
+          <Event
+            key={key}
+            name={event.summary}
+            description={event.description}
+            datetime={event.datetime}
+            location={event.location}
+          />
+        )
+      }
+    )
+
+
+
   return (
     <Container fluid>
       <Nav />
@@ -80,6 +98,17 @@ function Home() {
             <h2>About</h2>
             <hr />
             <p>Most of the computer-related clubs at the University of Florida were polarized to represent either electrical engineering or computer science . Students in computer engineering and other computer-related fields wanted a club that represented the union of electrical engineering and computer science. In the fall semester of 2014, their ideas would become reality through the official foundation of the University of Florida Association of Computer Engineers.</p>
+          </Container>
+        </Jumbotron>
+      </ScrollableAnchor>
+      <ScrollableAnchor id={'schedule'}>
+        <Jumbotron style={{ marginTop: 0 }}>
+          <Container>
+            <h2>Upcoming Events</h2>
+            <hr />
+            <Row className="justify-content-center">
+              {eventCards}
+            </Row>
           </Container>
         </Jumbotron>
       </ScrollableAnchor>
