@@ -13,8 +13,8 @@ const event = (props) => (
                         </Card.Text>
 
                        
-                            {<FontAwesomeIcon icon={faClock} fixedWidth />} 9/5 6:00PM   
-		                    <FontAwesomeIcon className="ml-3 mr-1" icon={faMapPin} />Marston L231 
+                            {<FontAwesomeIcon className="mr-1" icon={faClock} fixedWidth />}{props.datetime}  
+		                    <FontAwesomeIcon className="ml-3 mr-1" icon={faMapPin} />{props.location} 
 	                 
                     {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>

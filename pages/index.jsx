@@ -71,6 +71,8 @@ function Home() {
           key={key}
           name={event.summary}
           description={event.description}
+          datetime={event.datetime}
+          location={event.location}
         />
       )
     });

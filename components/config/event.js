@@ -3,92 +3,17 @@ const EVENT_DATA = [
   {
     "kind": "calendar#event",
     "id": "jasjkfbakjfbjgbebzbcbau",
-    "status": "confirmed",
-    "created": null,
-    "updated": null,
-    "summary": "To Yeet or be Yeeted",
-    "description": "come out for a yeeting of a lifetime",
-    "location": "",
-    "colorId": "",
-    "creator": {
-      "id": "",
-      "email": "",
-      "displayName": "",
-      "self": true
-    },
-    "organizer": {
-      "id": "",
-      "email": "",
-      "displayName": "",
-      "self": true
-    },
-    "start": {
-      "date": null,
-      "dateTime": null,
-      "timeZone": ""
-    },
-    "endTimeUnspecified": false
+    "summary": "GBM 1",
+    "description": "Our first General Body Meeting of the Spring Semester. Come out for free pizza and to learn about upcoming ACE events!",
+    "location": "TBA",
+    "datetime": "1/15 6:30PM"
   },
   {
-    "kind": "calendar#event",
-    "id": "jasjkfbakjfbjnjibeolsnbzbcbau",
-    "status": "confirmed",
-    "created": null,
-    "updated": null,
-    "summary": "Bruhuhhh",
-    "description": "what a bruh moment",
-    "location": "",
-    "colorId": "",
-    "creator": {
-      "id": "",
-      "email": "",
-      "displayName": "",
-      "self": true
-    },
-    "organizer": {
-      "id": "",
-      "email": "",
-      "displayName": "",
-      "self": true
-    },
-    "start": {
-      "date": null,
-      "dateTime": null,
-      "timeZone": ""
-    },
-    "endTimeUnspecified": false
-  },
-  {
-    "kind": "calendar#event",
-    "id": "jas219gsab3naskjbfv3",
-    "status": "confirmed",
-    "created": null,
-    "updated": null,
-    "summary": "Revenge of the yeet",
-    "description": "no one can save you now",
-    "location": "",
-    "colorId": "",
-    "creator": {
-      "id": "",
-      "email": "",
-      "displayName": "",
-      "self": true
-    },
-    "organizer": {
-      "id": "",
-      "email": "",
-      "displayName": "",
-      "self": true
-    },
-    "start": {
-      "date": null,
-      "dateTime": null,
-      "timeZone": ""
-    },
-    "endTimeUnspecified": false
+    "summary": "Ultimate Software Event",
+    "description": "bruhhh",
+    "location": "TBA",
+    "datetime": "TBA"
   }
-
-
 ]
 
   export default EVENT_DATA
