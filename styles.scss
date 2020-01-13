@@ -83,7 +83,11 @@ body {
   font-size: 1.2rem;
 
   &.active {
-    color: #e9ecef;;
+    color: #e9ecef;
+  }
+
+  &:hover {
+    color: #e9ecef;
   }
 }
 

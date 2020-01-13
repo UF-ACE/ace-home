@@ -97,7 +97,7 @@ function Home() {
           <Container>
             <h2>About</h2>
             <hr />
-            <p>Most of the computer-related clubs at the University of Florida were polarized to represent either electrical engineering or computer science . Students in computer engineering and other computer-related fields wanted a club that represented the union of electrical engineering and computer science. In the fall semester of 2014, their ideas would become reality through the official foundation of the University of Florida Association of Computer Engineers.</p>
+            <p>Founded in 2014, the Association of Computer Engineers serves as a community dedicated to representing the union of computer science and electrical engineering. We provide an opportunity for students at the University of Florida to develop their technical skills, learn from upperclassmen, and develop as professionals. Come out to one of our events and meet an amazing group of students to help you through your academic journey.</p>
           </Container>
         </Jumbotron>
       </ScrollableAnchor>
@@ -128,8 +128,8 @@ function Home() {
             <hr />
             <Row>
               <SocialButton link="https://uf-ace.slack.com/" icon={faSlack} title="Slack" />
-              <SocialButton link="https://www.facebook.com/groups/gatorace/?ref=bookmarks" icon={faFacebook} title="Facebook" />
-              <SocialButton link="https://twitter.com/ace_uf?lang=en" icon={faTwitter} title="Twitter" />
+              <SocialButton link="https://www.facebook.com/groups/gatorace/" icon={faFacebook} title="Facebook" />
+              <SocialButton link="https://twitter.com/ace_uf/" icon={faTwitter} title="Twitter" />
               <SocialButton link="https://www.instagram.com/ace_uf" icon={faInstagram} title="Instagram" />
             </Row>
           </Container>

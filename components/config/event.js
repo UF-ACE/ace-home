@@ -3,7 +3,7 @@ const EVENT_DATA = [
   {
     "summary": "GBM 1",
     "description": "Our first General Body Meeting of the Spring Semester. Come out for free pizza and to learn about upcoming ACE events!",
-    "location": "TBA",
+    "location": "MCCA G186",
     "datetime": "1/15 6:30PM"
   },
   {
