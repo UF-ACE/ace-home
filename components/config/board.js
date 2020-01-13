@@ -45,20 +45,20 @@ const BOARD_DATA = [
 		name: "Mackenzie Fileman",
 		email: "bec.uf.ace@gmail.com",
 		title: "Art",
-		src: "noPhoto.jpg",
+		src: "mackenzie.jpg",
 		slack: "Mackenzie Fileman"
 	},
 	{
 		name: "Robert McAdam",
 		title: "Marketing",
-		src: "noPhoto.jpg",
+		src: "bobby.jpg",
 		slack: "Bob"
 	},
 	{
 		name: "Caleb O'Malley",
 		email: "outreach.uf.ace@gmail.com",
 		title: "Outreach",
-		src: "noPhoto.jpg",
+		src: "caleb.png",
 		slack: "Caleb"
 	},
 	{
@@ -72,7 +72,7 @@ const BOARD_DATA = [
 		name: "Gregory Garrett",
 		email: "professional.uf.ace@gmail.com",
 		title: "Professional Dev.",
-		src: "noPhoto.jpg",
+		src: "greg.jpg",
 		slack: "Greg"
 	},
 	{
