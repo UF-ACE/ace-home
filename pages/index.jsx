@@ -88,7 +88,7 @@ function Home() {
         <Container className="banner text-center" fluid>
           <Image src={require('../public/banner.jpg')} alt="Banner ACE @ UF" fluid />
           <div className="over-img">
-            <h1 className="display-1 d-none d-sm-block">ACE @ UF</h1>
+            <h1 className="display-1 d-none d-sm-block">Association of Computer Engineers @ UF</h1>
           </div>
         </Container>
       </ScrollableAnchor>
