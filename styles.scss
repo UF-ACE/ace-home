@@ -77,4 +77,19 @@ body {
   color: white;
 }
 
+//overriding bootstrap navbar styling
+#navbar .nav-link {
+  color: rgb(97, 97, 97);
+  font-size: 1.2rem;
+
+  &.active {
+    color: #e9ecef;
+  }
+
+  &:hover {
+    color: #e9ecef;
+  }
+}
+
+
 @import "node_modules/bootstrap/scss/bootstrap";
