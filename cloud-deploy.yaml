@@ -77,10 +77,3 @@ spec:
             backend:
               serviceName: home
               servicePort: 80
-    - host: www.uf-ace.com
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: home
-              servicePort: 80
