@@ -38,7 +38,7 @@ const BOARD_DATA = [
 		name: "Dhruv Patel",
 		email: "academic.uf.ace@gmail.com",
 		title: "Academic",
-		src: "noPhoto.jpg",
+		src: "dhruv.png",
 		slack: "Dhruv Patel"
 	},
 	{
@@ -55,11 +55,11 @@ const BOARD_DATA = [
 		slack: "Bob"
 	},
 	{
-		name: "Caleb O'Malley",
+		name: "Adam Conybear",
 		email: "outreach.uf.ace@gmail.com",
 		title: "Outreach",
-		src: "caleb.png",
-		slack: "Caleb"
+		src: "adam.jpg",
+		slack: "Adam"
 	},
 	{
 		name: "Nate Stull",
@@ -79,15 +79,15 @@ const BOARD_DATA = [
 		name: "Eddie Ferro",
 		email: "fundraising.uf.ace@gmail.com",
 		title: "Fundraising",
-		src: "noPhoto.jpg",
+		src: "eddie.jpg",
 		slack: "Eddit Ferro"
 	},
 	{
-		name: "Adam Conybear",
+		name: "Caleb O'Malley",
 		email: "mentorship.uf.ace@gmail.com",
 		title: "Mentorship",
-		src: "noPhoto.jpg",
-		slack: "Adam"
+		src: "caleb.png",
+		slack: "Caleb"
 	},
 	{
 		name: "Connor Catlett",
