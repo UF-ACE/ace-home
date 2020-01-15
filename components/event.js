@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faClock } from '@fortawesome/free-solid-svg-icons'
 
 const event = (props) => (
-  <Row className="my-3 mx-4">
-    <Col xs={12} sm={3}>
-      <Card style={{ width: '18rem' }}>
+    <Col xs={12} sm={3} md={4} className="mt-3">
+      <Card>
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
           <Card.Text>
@@ -16,7 +15,6 @@ const event = (props) => (
         </Card.Body>
       </Card> 
     </Col>
-  </Row>
 )
     
 export default event

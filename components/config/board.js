@@ -65,7 +65,7 @@ const BOARD_DATA = [
 		name: "Nate Stull",
 		email: "social.uf.ace@gmail.com",
 		title: "Social",
-		src: "noPhoto.jpg",
+		src: "nate.jpg",
 		slack: "Nate Stull"
 	},
 	{
