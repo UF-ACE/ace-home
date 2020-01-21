@@ -1,4 +1,4 @@
-import { Nav, Navbar, Container } from 'react-bootstrap'
+import { Nav, Navbar, Container } from 'react-bootstrap';
 
 function Header() {
   return (
@@ -25,7 +25,7 @@ function Header() {
         </Container>
       </Navbar>
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;
