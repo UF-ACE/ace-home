@@ -1,31 +1,32 @@
-import '../styles.scss'
+import '../styles.scss';
 import {
   Container,
   Row,
   Col,
   Image,
-  Jumbotron
-} from 'react-bootstrap'
+  Jumbotron,
+} from 'react-bootstrap';
 
-import Nav from '../components/nav'
-import SocialButton from '../components/social-button'
-import Officer from '../components/officer'
-import Alumni from '../components/alumni'
-import Event from '../components/event'
+import ScrollableAnchor from 'react-scrollable-anchor';
+import {
+  faSlack, faFacebook, faTwitter, faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
+import Nav from '../components/nav';
+import SocialButton from '../components/social-button';
+import Officer from '../components/officer';
+import Alumni from '../components/alumni';
+import Event from '../components/event';
 
-import BOARD_DATA from '../components/config/board'
-import ALUMNI_DATA from '../components/config/alumni'
-import EVENT_DATA from '../components/config/event'
+import BOARD_DATA from '../components/config/board';
+import ALUMNI_DATA from '../components/config/alumni';
+import EVENT_DATA from '../components/config/event';
 
-import ScrollableAnchor from 'react-scrollable-anchor'
 
-import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
-
-const moment = require('moment')
+const moment = require('moment');
 
 function Home() {
   const boardCards = BOARD_DATA.map((officer, key) => (
-    <Officer 
+    <Officer
       title={officer.title}
       name={officer.name}
       email={officer.email}
@@ -33,58 +34,51 @@ function Home() {
       key={key}
       src={require(`../public/board/${officer.src}?resize&sizes[]=300&sizes[]=600`)}
     />
-  ))
+  ));
 
-  const today = moment()
+  const today = moment();
 
   const SORTED_ALUMNI = ALUMNI_DATA.sort((a, b) => {
     if (a.name < b.name) { return -1; }
     if (a.name > b.name) { return 1; }
     return 0;
-  })
+  });
 
-  const alumniCards = SORTED_ALUMNI.map((alumni, key) => 
-    {
-      let dateGrad = moment(alumni.dateGraduated)
-      if (today.isBefore(dateGrad)) {
-        return null
-      }
-      return (
-        <Alumni 
-          name={alumni.name}
-          slack={alumni.slack}
-          company={alumni.company}
-          major={alumni.major}
-          dateGraduated={dateGrad}
-          linkedin={alumni.linkedin}
-          roles={alumni.roles}
-          key={key}
-          src={require(`../public/alumni/${alumni.src}?resize&sizes[]=300&sizes[]=600`)}
-        />
-      )
+  const alumniCards = SORTED_ALUMNI.map((alumni, key) => {
+    const dateGrad = moment(alumni.dateGraduated);
+    if (today.isBefore(dateGrad)) {
+      return null;
     }
-  )
+    return (
+      <Alumni
+        name={alumni.name}
+        slack={alumni.slack}
+        company={alumni.company}
+        major={alumni.major}
+        dateGraduated={dateGrad}
+        linkedin={alumni.linkedin}
+        roles={alumni.roles}
+        key={key}
+        src={require(`../public/alumni/${alumni.src}?resize&sizes[]=300&sizes[]=600`)}
+      />
+    );
+  });
 
-    const eventCards = EVENT_DATA.map((event, key) => 
-      {
-        return (
-          <Event
-            key={key}
-            name={event.summary}
-            description={event.description}
-            datetime={event.datetime}
-            location={event.location}
-          />
-        )
-      }
-    )
-
+  const eventCards = EVENT_DATA.map((event, key) => (
+    <Event
+      key={key}
+      name={event.summary}
+      description={event.description}
+      datetime={event.datetime}
+      location={event.location}
+    />
+  ));
 
 
   return (
     <Container fluid>
       <Nav />
-      <ScrollableAnchor id={'home'}>
+      <ScrollableAnchor id="home">
         <Container className="banner text-center" fluid>
           <Image src={require('../public/banner.jpg')} alt="Banner ACE @ UF" fluid />
           <div className="over-img">
@@ -92,7 +86,7 @@ function Home() {
           </div>
         </Container>
       </ScrollableAnchor>
-      <ScrollableAnchor id={'about'}>
+      <ScrollableAnchor id="about">
         <Jumbotron className="mt-0">
           <Container>
             <h2>About</h2>
@@ -101,7 +95,7 @@ function Home() {
           </Container>
         </Jumbotron>
       </ScrollableAnchor>
-      <ScrollableAnchor id={'schedule'}>
+      <ScrollableAnchor id="schedule">
         <Jumbotron className="mt-0">
           <Container>
             <h2>Upcoming Events</h2>
@@ -114,14 +108,14 @@ function Home() {
       </ScrollableAnchor>
       <Container>
         <Row>
-          <Col xs={{span: 6, offset: 3}}>
+          <Col xs={{ span: 6, offset: 3 }}>
             <h2 className="text-center">Thank you to our Sponsors!</h2>
             <hr />
             <Image className="img-fluid" alt="Sponsor: JP Morgan and Chase Co" src={require('../public/sponsors/jpmc.jpg?resize')} />
           </Col>
         </Row>
       </Container>
-      <ScrollableAnchor id={'connect'}>
+      <ScrollableAnchor id="connect">
         <Jumbotron>
           <Container>
             <h2>Connect with Us</h2>
@@ -137,7 +131,7 @@ function Home() {
       </ScrollableAnchor>
       <Container>
         <Row>
-          <Col xs={{span: 6, offset: 3}}>
+          <Col xs={{ span: 6, offset: 3 }}>
             <h2 className="text-center">Our 2019 Officers</h2>
             <hr />
           </Col>
@@ -148,7 +142,7 @@ function Home() {
       </Container>
       <Container>
         <Row>
-          <Col xs={{span: 6, offset: 3}}>
+          <Col xs={{ span: 6, offset: 3 }}>
             <h2 className="text-center">Our Alumni</h2>
             <hr />
           </Col>
@@ -156,8 +150,7 @@ function Home() {
         {alumniCards}
       </Container>
     </Container>
-  )
+  );
 }
 
-export default Home
-
+export default Home;
