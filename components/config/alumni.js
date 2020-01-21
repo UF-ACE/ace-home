@@ -1,3 +1,9 @@
+import dani from '../../public/alumni/dani.jpg?resize&sizes[]=300&sizes[]=600';
+import agustin from '../../public/alumni/agustin.jpg?resize&sizes[]=300&sizes[]=600';
+import chad from '../../public/alumni/chad.jpeg?resize&sizes[]=300&sizes[]=600';
+import luke from '../../public/alumni/luke.jpg?resize&sizes[]=300&sizes[]=600';
+import jason from '../../public/alumni/jason.jpg?resize&sizes[]=300&sizes[]=600';
+
 const ALUMNI_DATA = [
   {
     name: 'Daniela Travieso',
@@ -7,7 +13,7 @@ const ALUMNI_DATA = [
       'Vice President',
       'Outreach Chair',
     ],
-    src: 'dani.jpg',
+    src: dani,
     slack: 'dani',
     linkedin: 'https://www.linkedin.com/in/daniela-travieso/',
     major: 'Computer Science',
@@ -20,7 +26,7 @@ const ALUMNI_DATA = [
       'Treasurer',
       'BEC Representative',
     ],
-    src: 'agustin.jpg',
+    src: agustin,
     slack: 'agustin',
     linkedin: 'https://www.linkedin.com/in/agustin-m/',
     major: 'Information Systems',
@@ -33,7 +39,7 @@ const ALUMNI_DATA = [
       'Treasurer',
       'BEC Representative',
     ],
-    src: 'chad.jpeg',
+    src: chad,
     slack: 'chad',
     linkedin: 'https://www.linkedin.com/in/chadzlim/',
     major: 'Computer Engineering',
@@ -45,7 +51,7 @@ const ALUMNI_DATA = [
     roles: [
       'Web Development Chair',
     ],
-    src: 'luke.jpg',
+    src: luke,
     slack: 'lrp',
     linkedin: 'https://www.linkedin.com/in/lukerpfeiffer/',
     major: 'Computer Engineering',
@@ -58,7 +64,7 @@ const ALUMNI_DATA = [
       'Secretary',
       'BEC Representative',
     ],
-    src: 'jason.jpg',
+    src: jason,
     slack: 'jason',
     linkedin: 'https://www.linkedin.com/in/jasonrhsu/',
     major: 'Computer Engineering',
