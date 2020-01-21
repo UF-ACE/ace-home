@@ -11,6 +11,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import {
   faSlack, faFacebook, faTwitter, faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
 import Nav from '../components/nav';
 import SocialButton from '../components/social-button';
 import Officer from '../components/officer';

@@ -2,6 +2,7 @@ import { Image, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 const officer = (props) => (
   <Col xs={12} sm={10} md={3} className="mx-4">

@@ -1,5 +1,6 @@
 import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 const socialButton = (props) => (
   <Col xs={12} sm={6} md={3} className="mt-4 social-button">

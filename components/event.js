@@ -3,6 +3,7 @@ import {
 } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin, faClock } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 const event = (props) => (
   <Col xs={12} sm={3} md={4} className="mt-3">

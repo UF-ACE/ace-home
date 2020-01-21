@@ -2,6 +2,7 @@ import { Image, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlack, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 
 const alumni = (props) => (
   <Row className="my-3 mx-4">
