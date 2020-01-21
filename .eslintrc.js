@@ -22,5 +22,8 @@ module.exports = {
     'react',
   ],
   rules: {
-  },
+    "react/jsx-props-no-spreading": [0],
+    "object-curly-newline": ["error", { "multiline": true }],
+    "import/no-unresolved": [2, { ignore: ['\.(png|jp(e?)]g)\?.+$'] }]
+  }
 };

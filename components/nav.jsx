@@ -1,6 +1,8 @@
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import React from 'react';
 
+import logo from '../public/logo.png?resize&sizes[]=140';
+
 function Header() {
   return (
     <>
@@ -8,7 +10,7 @@ function Header() {
         <Container>
           <Navbar.Brand>
             <img
-              src={require('../public/logo.png?resize&sizes[]=140')}
+              src={logo}
               height="30"
               alt="Logo"
               className="d-inline-block align-top"

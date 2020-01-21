@@ -8,10 +8,10 @@ import {
 } from 'react-bootstrap';
 
 import ScrollableAnchor from 'react-scrollable-anchor';
-import {
-  faSlack, faFacebook, faTwitter, faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
+import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
+import moment from 'moment';
+
 import Nav from '../components/nav';
 import SocialButton from '../components/social-button';
 import Officer from '../components/officer';
@@ -22,18 +22,18 @@ import BOARD_DATA from '../components/config/board';
 import ALUMNI_DATA from '../components/config/alumni';
 import EVENT_DATA from '../components/config/event';
 
-
-const moment = require('moment');
+import banner from '../public/banner.jpg';
+import jpmc from '../public/sponsors/jpmc.jpg?resize';
 
 function Home() {
-  const boardCards = BOARD_DATA.map((officer, key) => (
+  const boardCards = BOARD_DATA.map((officer) => (
     <Officer
       title={officer.title}
       name={officer.name}
       email={officer.email}
       slack={officer.slack}
-      key={key}
-      src={require(`../public/board/${officer.src}?resize&sizes[]=300&sizes[]=600`)}
+      key={officer.name}
+      src={officer.src}
     />
   ));
 
@@ -45,7 +45,7 @@ function Home() {
     return 0;
   });
 
-  const alumniCards = SORTED_ALUMNI.map((alumni, key) => {
+  const alumniCards = SORTED_ALUMNI.map((alumni) => {
     const dateGrad = moment(alumni.dateGraduated);
     if (today.isBefore(dateGrad)) {
       return null;
@@ -59,15 +59,15 @@ function Home() {
         dateGraduated={dateGrad}
         linkedin={alumni.linkedin}
         roles={alumni.roles}
-        key={key}
-        src={require(`../public/alumni/${alumni.src}?resize&sizes[]=300&sizes[]=600`)}
+        key={alumni.name}
+        src={alumni.src}
       />
     );
   });
 
-  const eventCards = EVENT_DATA.map((event, key) => (
+  const eventCards = EVENT_DATA.map((event) => (
     <Event
-      key={key}
+      key={event.summary}
       name={event.summary}
       description={event.description}
       datetime={event.datetime}
@@ -81,7 +81,7 @@ function Home() {
       <Nav />
       <ScrollableAnchor id="home">
         <Container className="banner text-center" fluid>
-          <Image src={require('../public/banner.jpg')} alt="Banner ACE @ UF" fluid />
+          <Image src={banner} alt="Banner ACE @ UF" fluid />
           <div className="over-img">
             <h1 className="display-1 d-none d-sm-block">Association of Computer Engineers @ UF</h1>
           </div>
@@ -92,7 +92,14 @@ function Home() {
           <Container>
             <h2>About</h2>
             <hr />
-            <p>Founded in 2014, the Association of Computer Engineers serves as a community dedicated to representing the union of computer science and electrical engineering. We provide an opportunity for students at the University of Florida to develop their technical skills, learn from upperclassmen, and develop as professionals. Come out to one of our events and meet an amazing group of students to help you through your academic journey.</p>
+            <p>
+              Founded in 2014, the Association of Computer Engineers serves as a community dedicated
+              to representing the union of computer science and electrical engineering.
+              We provide an opportunity for students at the University of Florida to develop
+              their technical skills, learn from upperclassmen, and develop as professionals.
+              Come out to one of our events and meet an amazing group of students
+              to help you through your academic journey.
+            </p>
           </Container>
         </Jumbotron>
       </ScrollableAnchor>
@@ -112,7 +119,7 @@ function Home() {
           <Col xs={{ span: 6, offset: 3 }}>
             <h2 className="text-center">Thank you to our Sponsors!</h2>
             <hr />
-            <Image className="img-fluid" alt="Sponsor: JP Morgan and Chase Co" src={require('../public/sponsors/jpmc.jpg?resize')} />
+            <Image className="img-fluid" alt="Sponsor: JP Morgan and Chase Co" src={jpmc} />
           </Col>
         </Row>
       </Container>
