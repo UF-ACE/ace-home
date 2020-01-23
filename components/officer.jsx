@@ -28,7 +28,19 @@ Email
 
 officer.propTypes = {
   title: PropTypes.string.isRequired,
-  src: PropTypes.node.isRequired,
+  src: PropTypes.shape({
+    srcSet: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.shape({
+      path: PropTypes.string,
+      width: PropTypes.number,
+      height: PropTypes.number,
+    })),
+    src: PropTypes.string,
+    toString: PropTypes.func,
+    placeholder: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }).isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string,
   slack: PropTypes.string.isRequired,
