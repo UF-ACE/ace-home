@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const officer = ({ title, src, name, email, slack }) => (
-    <Col xs={12} sm={10} md={3} className="mx-4">
+  <Col xs={12} sm={10} md={3} className="mx-4">
     <h3 className="text-center mt-3">{title}</h3>
     <Image src={src} alt={title} rounded fluid />
     <p className="text-center mt-3 mb-1">{name}</p>
