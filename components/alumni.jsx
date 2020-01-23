@@ -69,7 +69,19 @@ LinkedIn
 );
 
 alumni.propTypes = {
-  src: PropTypes.node.isRequired,
+  src: PropTypes.shape({
+    srcSet: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.shape({
+      path: PropTypes.string,
+      width: PropTypes.number,
+      height: PropTypes.number,
+    })),
+    src: PropTypes.string,
+    toString: PropTypes.func,
+    placeholder: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }).isRequired,
   name: PropTypes.string.isRequired,
   roles: PropTypes.arrayOf(PropTypes.string).isRequired,
   dateGraduated: PropTypes.instanceOf(moment).isRequired,

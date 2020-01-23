@@ -14,7 +14,15 @@ const socialButton = ({ link, icon, title }) => (
 
 socialButton.propTypes = {
   link: PropTypes.string.isRequired,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.shape({
+    icon: PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+      PropTypes.array,
+    ])),
+    iconName: PropTypes.string,
+    prefix: PropTypes.string,
+  }).isRequired,
   title: PropTypes.string.isRequired,
 };
 
