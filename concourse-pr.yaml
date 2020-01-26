@@ -8,6 +8,7 @@ resources:
   - name: pull-request
     type: pull-request
     check_every: 1m
+    icon: github-circle
     source:
       repository: UF-ACE/ace-home
       access_token: ((github.access-token))

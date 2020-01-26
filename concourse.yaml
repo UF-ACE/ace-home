@@ -1,0 +1,39 @@
+resources:
+  - name: ace-home-git
+    type: git
+    icon: github-circle
+    source:
+      uri: https://github.com/UF-ACE/ace-home.git
+  - name: ace-home-registry
+    type: registry-image
+    icon: docker
+    check_every: 24h
+    source:
+      repository: core.harbor.cloud.uf-ace.com/ace-official/ace-home
+      username: ((harbor.username))
+      password: ((harbor.password))
+
+jobs:
+  - name: build-image
+    plan:
+      - get: ace-home-git
+        trigger: true
+      - task: build
+        privileged: true
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source:
+              repository: vito/oci-build-task
+              tag: latest
+          inputs:
+            - name: ace-home-git
+              path: .
+          outputs:
+            - name: ace-home-image
+              path: image
+          run:
+            path: build
+      - put: ace-home-registry
+        params: { image: ace-home-image/image.tar , additional_tags: ace-home-git/.git/ref }
