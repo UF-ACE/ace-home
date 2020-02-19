@@ -70,7 +70,7 @@ function Home() {
   useEffect(() => {
     if (loadingEvents) {
       setLoadingEvents(false);
-      fetch('https://events.uf-ace.com/api/events/')
+      fetch('https://events.uf-ace.com/api/upcoming')
         .then((response) => response.json())
         .then(({ content }) => setEventData(content));
     }
@@ -80,7 +80,7 @@ function Home() {
     <Event
       key={event.summary}
       name={event.name}
-      description={event.description.replace(/<\/?\w+>/g, '').replace('&nbsp;', '').slice(0, 250)}
+      description={event.short_description}
       datetime={event.start_time}
       location={event.location}
     />
