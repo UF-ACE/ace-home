@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin, faClock } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
 const event = ({ name, description, datetime, location }) => (
   <Col xs={12} sm={3} md={4} className="mt-3">
@@ -13,8 +14,9 @@ const event = ({ name, description, datetime, location }) => (
           {description}
         </Card.Text>
         <FontAwesomeIcon className="mr-1" icon={faClock} fixedWidth />
-        {datetime}
-        <FontAwesomeIcon className="ml-3 mr-1" icon={faMapPin} />
+        {moment(datetime).format('ddd. MMMM Do, h:mma')}
+        <br />
+        <FontAwesomeIcon className="ml-1 mr-1" icon={faMapPin} />
         {location}
       </Card.Body>
     </Card>

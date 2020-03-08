@@ -9,7 +9,7 @@ import {
 
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { faSlack, faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
 import Nav from '../components/nav';
@@ -20,7 +20,6 @@ import Event from '../components/event';
 
 import BOARD_DATA from '../components/config/board';
 import ALUMNI_DATA from '../components/config/alumni';
-import EVENT_DATA from '../components/config/event';
 
 import banner from '../public/banner.jpg';
 import jpmc from '../public/sponsors/jpmc.jpg?resize';
@@ -65,12 +64,24 @@ function Home() {
     );
   });
 
-  const eventCards = EVENT_DATA.map((event) => (
+  const [eventData, setEventData] = useState([]);
+  const [loadingEvents, setLoadingEvents] = useState(true);
+
+  useEffect(() => {
+    if (loadingEvents) {
+      setLoadingEvents(false);
+      fetch('https://events.uf-ace.com/api/upcoming')
+        .then((response) => response.json())
+        .then(({ content }) => setEventData(content));
+    }
+  });
+
+  const eventCards = eventData.map((event) => (
     <Event
       key={event.summary}
-      name={event.summary}
-      description={event.description}
-      datetime={event.datetime}
+      name={event.name}
+      description={event.short_description}
+      datetime={event.start_time}
       location={event.location}
     />
   ));
