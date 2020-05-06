@@ -53,17 +53,17 @@ spec:
   selector:
     app: home
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: home
   labels:
     service: web
   annotations:
-    kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
 spec:
+  ingressClassName: "nginx"
   tls:
     - hosts:
         - uf-ace.com
