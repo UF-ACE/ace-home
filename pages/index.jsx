@@ -1,6 +1,7 @@
 import '../styles.scss';
 import {
   Container,
+  Card,
   Row,
   Col,
   Image,
@@ -120,7 +121,7 @@ function Home() {
             <h2>Upcoming Events</h2>
             <hr />
             <Row className="justify-content-center">
-              {eventCards}
+              {eventCards ? eventCards : <Card><Card.Text>Loading...</Card.Text></Card>}
             </Row>
           </Container>
         </Jumbotron>
