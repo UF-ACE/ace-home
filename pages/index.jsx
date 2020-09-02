@@ -1,10 +1,12 @@
 import '../styles.scss';
 import {
   Container,
+  Card,
   Row,
   Col,
   Image,
   Jumbotron,
+  Spinner,
 } from 'react-bootstrap';
 
 import ScrollableAnchor from 'react-scrollable-anchor';
@@ -76,7 +78,7 @@ function Home() {
     }
   });
 
-  const eventCards = eventData.map((event) => (
+  const renderedEventCards = eventData.map((event) => (
     <Event
       key={event.summary}
       name={event.name}
@@ -86,6 +88,19 @@ function Home() {
     />
   ));
 
+  const loadingCard = (
+    <Card>
+      <Card.Body>
+        <Card.Title>Loading...</Card.Title>
+        <Card.Text>
+          <div className="d-flex justify-content-center">
+            <Spinner animation="border" />
+          </div>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
+  const eventCardsComponent = renderedEventCards.length > 0 ? renderedEventCards : loadingCard;
 
   return (
     <Container fluid>
@@ -120,7 +135,7 @@ function Home() {
             <h2>Upcoming Events</h2>
             <hr />
             <Row className="justify-content-center">
-              {eventCards}
+              {eventCardsComponent}
             </Row>
           </Container>
         </Jumbotron>
