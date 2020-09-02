@@ -29,7 +29,7 @@ const alumni = ({ name, src, roles, dateGraduated, major, company, slack, linked
         <a className="social-button mr-2" href={linkedin} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} fixedWidth />
           {' '}
-LinkedIn
+          LinkedIn
         </a>
       </p>
     </Col>
@@ -42,7 +42,7 @@ LinkedIn
         Graduated
         {' '}
         {dateGraduated.format('YYYY')}
-,
+        ,
         {' '}
         {major}
       </p>
@@ -54,14 +54,14 @@ LinkedIn
       <p className="text-center">
         <FontAwesomeIcon className="ml-1 mr-0" icon={faSlack} />
         {' '}
-@
+        @
         {slack}
         {' '}
         <br />
         <a className="social-button mr-2" href={linkedin} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} fixedWidth />
           {' '}
-LinkedIn
+          LinkedIn
         </a>
       </p>
     </Col>

@@ -26,5 +26,4 @@ socialButton.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-
 export default socialButton;

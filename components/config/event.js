@@ -1,4 +1,3 @@
-
 const EVENT_DATA = [
   {
     summary: 'GBM 1',

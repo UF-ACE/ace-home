@@ -15,12 +15,12 @@ const officer = ({ title, src, name, email, slack }) => (
         <a className="mail-button mr-2" href={`mailto:${email}`}>
           <FontAwesomeIcon icon={faEnvelope} fixedWidth />
           {' '}
-Email
+          Email
         </a>
       ) : null}
       <FontAwesomeIcon className="ml-1 mr-0" icon={faSlack} />
       {' '}
-@
+      @
       {slack}
     </p>
   </Col>

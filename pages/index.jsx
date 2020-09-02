@@ -88,17 +88,19 @@ function Home() {
     />
   ));
 
-  const loadingCard = <Card>
-    <Card.Body>
-      <Card.Title>Loading...</Card.Title>
-      <Card.Text>
-        <div class="d-flex justify-content-center">
-          <Spinner animation="border" />
-        </div>
-      </Card.Text>
-    </Card.Body>
-  </Card>
-  const eventCardsComponent = renderedEventCards.length > 0 ? renderedEventCards : loadingCard
+  const loadingCard = (
+    <Card>
+      <Card.Body>
+        <Card.Title>Loading...</Card.Title>
+        <Card.Text>
+          <div className="d-flex justify-content-center">
+            <Spinner animation="border" />
+          </div>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
+  const eventCardsComponent = renderedEventCards.length > 0 ? renderedEventCards : loadingCard;
 
   return (
     <Container fluid>
