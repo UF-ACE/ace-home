@@ -14,10 +14,10 @@ const event = ({ name, description, datetime, location }) => (
           {description}
         </Card.Text>
         <FontAwesomeIcon className="mr-1" icon={faClock} fixedWidth />
-         {moment(datetime).format('ddd. MMMM Do, h:mma')}
+        {moment(datetime).format('ddd. MMMM Do, h:mma')}
         <br />
         <FontAwesomeIcon className="ml-1 mr-1" icon={faMapPin} />
-         {location}
+        {location}
       </Card.Body>
     </Card>
   </Col>
