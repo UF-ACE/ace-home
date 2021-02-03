@@ -21,7 +21,6 @@ function Header() {
             <Nav id="navbar" className="ml-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="https://events.uf-ace.com/">Events</Nav.Link>
               <Nav.Link href="https://uf-ace.slack.com">Join Slack</Nav.Link>
             </Nav>
           </Navbar.Collapse>

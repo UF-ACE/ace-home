@@ -66,42 +66,6 @@ function Home() {
     );
   });
 
-  const [eventData, setEventData] = useState([]);
-  const [loadingEvents, setLoadingEvents] = useState(true);
-
-  useEffect(() => {
-    if (loadingEvents) {
-      setLoadingEvents(false);
-      fetch('https://events.uf-ace.com/api/upcoming')
-        .then((response) => response.json())
-        .then(({ content }) => setEventData(content));
-    }
-  });
-
-  const renderedEventCards = eventData.map((event) => (
-    <Event
-      key={event.summary}
-      name={event.name}
-      description={event.short_description}
-      datetime={event.start_time}
-      location={event.location}
-    />
-  ));
-
-  const loadingCard = (
-    <Card>
-      <Card.Body>
-        <Card.Title>Loading...</Card.Title>
-        <Card.Text>
-          <div className="d-flex justify-content-center">
-            <Spinner animation="border" />
-          </div>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  );
-  const eventCardsComponent = renderedEventCards.length > 0 ? renderedEventCards : loadingCard;
-
   return (
     <Container fluid>
       <Nav />
@@ -126,17 +90,6 @@ function Home() {
               Come out to one of our events and meet an amazing group of students
               to help you through your academic journey.
             </p>
-          </Container>
-        </Jumbotron>
-      </ScrollableAnchor>
-      <ScrollableAnchor id="schedule">
-        <Jumbotron className="mt-0">
-          <Container>
-            <h2>Upcoming Events</h2>
-            <hr />
-            <Row className="justify-content-center">
-              {eventCardsComponent}
-            </Row>
           </Container>
         </Jumbotron>
       </ScrollableAnchor>
